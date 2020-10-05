@@ -1,0 +1,11 @@
+extends layout
+
+block content
+    h1 #{title}
+    form(action="/new" method="POST")
+        #author-input
+            label Author
+            input(type="text" name="author")
+        label Message
+        textarea(name="message", cols="30", rows="10")
+        button(id="send") Send
